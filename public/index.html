@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/sinasappel.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#8e24aa" />
     <meta
       name="description"
       content="Web site created using create-react-app"
@@ -15,6 +15,10 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,10 +28,59 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Huize Capri - Streeplijst</title>
+
+    <style>
+      * { box-sizing: border-box; }
+
+      html {
+        width: 100%;
+        height: 100%;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        font-family: 'Montserrat', sans-serif;
+
+        background-color: #8e24aa;
+      }
+
+      #splash {
+        width: 100%;
+        height: 100%;
+
+        position: fixed;
+        z-index: 100;
+
+        padding: 4rem;
+
+        background-color: #8e24aa;
+        opacity: 1;
+        pointer-events: none;
+
+        transition: opacity 300ms ease;
+      }
+
+      #splash img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      #root {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="splash"><img src="%PUBLIC_URL%/huize_capri.svg" alt="" /></div>
     <div id="root"></div>
     <!--
       This HTML file is a template.
